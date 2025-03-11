@@ -10,3 +10,14 @@ const pool = new Pool({
 });
 
 export default pool;
+
+// const pgp = require('pg-promise')
+// const db = pgp(process.env.DATABASE_URL)
+
+// db.one('Select $1 AS value', 123)
+//   .then((data)=> {
+//     console.log('Data:', data.value)
+//   })
+//   .catch((error) => {
+//     console.log('Error:', error)
+//   })
