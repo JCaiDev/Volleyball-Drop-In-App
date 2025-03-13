@@ -1,9 +1,15 @@
-import { useState } from "react";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/home/HomePage.tsx";
 import "./App.css";
 
 function App() {
-  return <></>;
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;
