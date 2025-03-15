@@ -13,9 +13,9 @@ const PORT = process.env.PORT || 5000;
 async function testDBConnection() {
   try {
     const res = await pool.query("SELECT NOW()");
-    console.log("✅ Connected to PostgreSQL! Time:", res.rows[0].now);
+    console.log("Database connected at:", res.rows[0].now);
   } catch (error) {
-    console.error("❌ Database connection error:", err);
+    console.error("Database connection error:", err);
   }
 }
 
@@ -32,4 +32,8 @@ app.use("/api/users", userRoutes);
 app.listen(PORT, () => {
   console.log(`Server is running on PORT: ${PORT}`);
   testDBConnection();
+});
+
+app.get("/test", (req, res) => {
+  res.send("Backend is working!");
 });
