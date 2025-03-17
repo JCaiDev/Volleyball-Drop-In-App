@@ -3,11 +3,12 @@ import cors from "cors";
 import dotenv from "dotenv";
 import userRoutes from "./src/routes/userRoutes.js";
 import pool from "./src/config/db.js";
+import gamesRoutes from "./src/routes/gameRoutes.js";
 
 dotenv.config();
+const PORT = process.env.PORT || 5000;
 
 const app = express();
-const PORT = process.env.PORT || 5000;
 
 // Test Database Connection
 async function testDBConnection() {
@@ -25,6 +26,7 @@ app.use(cors());
 
 //  Routes
 app.use("/api/users", userRoutes);
+app.use("/api", gamesRoutes);
 
 //  Error handling middleware
 
@@ -34,6 +36,7 @@ app.listen(PORT, () => {
   testDBConnection();
 });
 
+//  simple test route
 app.get("/test", (req, res) => {
   res.send("Backend is working!");
 });

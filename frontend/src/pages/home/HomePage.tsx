@@ -23,7 +23,7 @@ function HomePage() {
 
       <section className="hero">
         <h2>Find & Join Drop-In Volleyball Games!</h2>
-        <p>Play games near you and connect with other players</p>
+        <p>Earn Your Play Time</p>
       </section>
 
       <section className="search-bar">
@@ -37,9 +37,9 @@ function HomePage() {
         <h3>Upcoming Games</h3>
         <div className="game-card">
           <h4>The League: Saturday Night Live - Richmond Hill</h4>
-          <p>📍 Richmond Green Secondary School</p>
+          <p>Richmond Green Secondary School</p>
           <span onClick={handleGoogleMapSearch}>
-            1 William F. Bell Pkway, Richmond Hill, ON L4S 2T9
+            📍 1 William F. Bell Pkway <br></br> Richmond Hill, ON L4S 2T9
           </span>
           <p>🕒 Saturday 7:45 PM - 10:00 PM </p>
           <p>👥 19/24 Spots</p>
