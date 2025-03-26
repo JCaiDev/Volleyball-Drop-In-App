@@ -28,16 +28,16 @@ router.post("/games", async (req, res) => {
     if (max_players === undefined)
       return res.status(400).json({ message: `Missing spots.` });
 
-    const results = await pool.query(
+    const newGame = await pool.query(
       `INSERT INTO games (user_id, title, date, start_time, end_time, location, max_players)
             VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *`,
       [user_id, title, date, start_time, end_time, location, max_players]
     );
 
-    res.status(201).json(results.rows[0]);
-  } catch (error) {
+    res.status(201).json(newGame.rows[0]);
+  } catch (err) {
     console.error(err.message);
-    res.status(500).json({ error: "Server error" });
+    res.status(500).json({ error: "Server error while hosting game" });
   }
 });
 

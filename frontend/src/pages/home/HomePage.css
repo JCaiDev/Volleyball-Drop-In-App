@@ -102,3 +102,25 @@ body {
 .game-card button:hover {
   background-color: #1b741b;
 }
+
+.floating-host-game {
+  position: fixed;
+  right: 20px;
+  bottom: 10px;
+  transform: translateY(-50%);
+  background-color: rgb(116, 116, 228);
+  color: white;
+  padding: 12px 20px;
+  border: 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-align: center;
+  transform: all 0.3s ease;
+}
+.floating-host-game:hover {
+  background-color: #e68900;
+  box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.5);
+}

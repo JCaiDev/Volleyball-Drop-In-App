@@ -46,6 +46,9 @@ function HomePage() {
           <button onClick={() => navigate("/games")}>Join Game</button>
         </div>
       </section>
+      <div className="floating-host-game" onClick={() => navigate("/host")}>
+        Host a Game
+      </div>
     </div>
   );
 }
