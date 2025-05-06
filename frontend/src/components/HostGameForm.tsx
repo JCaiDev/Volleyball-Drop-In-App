@@ -85,7 +85,7 @@ const HostGameForm: React.FC<HostGameFormProps> = ({
 
   return (
     <div>
-      <h2>Host and Organize a New Game</h2>
+      <h2>Enter New Game Information</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
